@@ -17,3 +17,9 @@ skills/<skill-name>/
 2. 编写 `SKILL.md`，说明用途、触发条件、使用方式与依赖。
 3.（可选）补充配套脚本或模板。
 4. `git add` 后提交。
+
+## 已收录 skills
+
+| Skill | 用途 | 依赖 |
+| --- | --- | --- |
+| [joplin-notes](joplin-notes/) | 通过 Joplin 本地 REST API（Web Clipper / ClipperServer，默认 `http://127.0.0.1:41184`）新增、读取、搜索、管理笔记 | Joplin 应用 + Web Clipper 开启；`JOPLIN_TOKEN`（Web Clipper token）环境变量 |
