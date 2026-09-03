@@ -16,3 +16,6 @@ temp/
 
 # local tool config (Reasonix)
 reasonix.toml
+
+# 项目级 Agent / skill（仅本地使用，不随仓库分享）
+.reasonix/
