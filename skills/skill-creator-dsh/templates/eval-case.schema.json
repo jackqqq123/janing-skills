@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DSH Skill Evaluation Cases",
+  "type": "object",
+  "required": ["skill", "cases"],
+  "properties": {
+    "skill": {"type": "string"},
+    "cases": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["id", "category", "prompt", "expectations"],
+        "properties": {
+          "id": {"type": "string"},
+          "category": {"enum": ["success", "boundary", "non-trigger"]},
+          "prompt": {"type": "string"},
+          "expectations": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,28 @@
+{
+  "skill": "injection-safety-fixture</script><img src=x onerror=alert(1)>",
+  "generatedAt": "2026-04-20T00:00:00Z",
+  "limitations": ["Hostile </script><b>text</b> & 'quotes' test."],
+  "cases": [
+    {
+      "id": "script-close</script>",
+      "baseline": {"summary": "plain</script><b>untrusted</b>&amp;"},
+      "withSkill": {"summary": "<img src=x onerror=alert(1)>"},
+      "assertions": [{"status": "pass", "message": "Escapes </script> and HTML markup"}],
+      "review": {"verdict": "pass", "rationale": "Fixture is hostile data, not markup."}
+    },
+    {
+      "id": "boundary-test",
+      "baseline": {},
+      "withSkill": {},
+      "assertions": [{"status": "pass", "message": "ok"}],
+      "review": {"verdict": "pass", "rationale": "ok"}
+    },
+    {
+      "id": "non-trigger-test",
+      "baseline": {},
+      "withSkill": {},
+      "assertions": [{"status": "pass", "message": "ok"}],
+      "review": {"verdict": "pass", "rationale": "ok"}
+    }
+  ]
+}

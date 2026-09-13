@@ -1,0 +1,37 @@
+{
+  "skill": "example-skill",
+  "generatedAt": "2026-04-20T00:00:00Z",
+  "limitations": [
+    "Sample fixture only; no model execution occurred.",
+    "Three illustrative cases are not statistically significant."
+  ],
+  "cases": [
+    {
+      "id": "create-success",
+      "baseline": {"summary": "No reusable structure"},
+      "withSkill": {"summary": "Produced a valid DSH skill plan"},
+      "assertions": [
+        {"status": "pass", "message": "Includes required kebab-case frontmatter"}
+      ],
+      "review": {"verdict": "pass", "rationale": "Expected structure is present."}
+    },
+    {
+      "id": "project-path-boundary",
+      "baseline": {"summary": "Suggested .agents/.skills"},
+      "withSkill": {"summary": "Corrected to .agents/skills"},
+      "assertions": [
+        {"status": "pass", "message": "Uses the default project skills path"}
+      ],
+      "review": {"verdict": "pass", "rationale": "Correct path and precedence stated."}
+    },
+    {
+      "id": "ordinary-task-non-trigger",
+      "baseline": {"summary": "Normal coding response"},
+      "withSkill": {"summary": "Did not load skill creator"},
+      "assertions": [
+        {"status": "pass", "message": "Avoids irrelevant invocation"}
+      ],
+      "review": {"verdict": "pass", "rationale": "Boundary is respected."}
+    }
+  ]
+}
